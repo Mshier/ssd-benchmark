@@ -38,3 +38,11 @@ These modifications may include:
 - adding benchmark-specific utility scripts when needed.
 
 Detailed hyperparameter settings are reported in the supplementary material of the submission.
+
+## Environment Note
+
+This repository does not provide a single unified environment for all baselines.
+
+For third-party baselines, reviewers should follow the dependency and environment setup specified in the corresponding original repositories.
+
+This repository only provides SSD-specific benchmark utilities, split files, and unified evaluation scripts.
