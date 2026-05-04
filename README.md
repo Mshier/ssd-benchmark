@@ -40,7 +40,9 @@ All methods are evaluated under the same benchmark protocol:
 - MoF
 - mIoU
 - Edit
-- F1
+- F1@10
+- F1@25
+- F1@50
 
 ## Repository Scope
 
@@ -71,6 +73,24 @@ This repository does **not** include:
 - SMQ
 
 Official baseline implementations should be obtained from their original repositories.
+
+## Repository Contents
+
+### Evaluation scripts
+- `eval/supervised_eval.py`: evaluation script for supervised temporal phase segmentation.
+- `eval/unsupervised_eval.py`: evaluation script for unsupervised temporal phase segmentation.
+- `eval/boundary_eval.py`: evaluation script for boundary-oriented analysis.
+
+### Utility scripts
+- `tools/convert_skeleton.py`: converts skeleton sequences from `(103, 17, 2)` to frame-wise vector format `(103, 34)` when required by specific baselines.
+- `tools/build_coco17_graph.py`: builds the COCO-17 joint graph used by graph-based skeleton models.
+- `tools/extract_boundaries.py`: extracts temporal boundaries from frame-wise predictions for boundary-oriented evaluation.
+- `tools/get_csv.py`: generates or organizes CSV metadata files used by the SSD benchmark pipeline.
+
+### Split files
+- `splits/train.txt`
+- `splits/val.txt`
+- `splits/test.txt`
 
 ## Notes
 
